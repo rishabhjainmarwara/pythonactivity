@@ -73,7 +73,13 @@ elif choice=='7':
 	os.system('reboot')
 #os.system function use because voice massege use      echo ke bad jo bhi likte h vo vahi print krta h 
 # | festival --tts cammand h voice ka text to speech    isme print se msg kpo define nii krege because apn ne yha massege voice se btaYA H
-
+elif select == '8' :
+	print "checking internet connection in your lappi"
+	try    :
+		urllib.urlopen('https://www.google.com')
+		print "connected"
+	except :
+		print "not connected"
 
 
 
