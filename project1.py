@@ -26,28 +26,40 @@ if choice == '1':
 
 elif choice=='2':
 	path="/root/Desktop/"
-	msg5=raw_input("file name")
-	os.system('touch ' +path+msg5)
-	msg6="file is created"
-	print msg6
+	msg1=raw_input("file name")
+	os.system('touch ' +path+msg1)
+	msg2="file is created"
+	print msg2
+
+
+elif choice=='3':
+	path="/root/Desktop/"
+	msg8=raw_input("type name")
+	os.system('touch ' +path+msg8)
+	print "directry is created"	
 
 elif choice=='4':
 	print "searching on google..."
-	msg=raw_input("type for searching")
-	webbrowser.open_new_tab('https://www.google.com/search?q='+msg)
+	msg3=raw_input("type for searching")
+	webbrowser.open_new_tab('https://www.google.com/search?q='+msg3)
+
+#open new tab beacause opening result in new tab
 
 
 elif choice=='5':
-	print "close all app in your os"
-	msg1="bhai ab bas abhi band apna pc"
-	print msg1
-	time.sleep(3)
-	msg2="bhai tu to gya  aaj"
-	print msg2
-	time.sleep(2)
-	os.system('poweroff')
+	print "if you want to shut down your pc y/n"
+	y='''
+	press y: shut down
+	'''
+	choice1=raw_input()
+	if choice1=='y':
+		print "ok processing is going on your pc will be shut down after 15 minut...."
+		time.sleep(900)
+		os.system('poweroff')
+	else:
+		print "thanks"
 #time.sleep is a function who stop the program for some time
-
+#second time for ask permission to y/n another raw_input define with another variable
 
 elif choice=='6':
 	print "logout your system"
@@ -56,26 +68,18 @@ elif choice=='6':
 	print msg4
 	time.sleep(2)
 	os.system("pkill -kill -u " + os.getlogin())
-#for voice remove "print msg4" and place "os.system('echo '+msg4+' | festival --tts)
-
 
 elif choice=='7':
 	print "close all app in your os"
-	msg1="shut down app"
-	os.system('echo '+msg1+'  | festival --tts')
+	msg5="shut down app"
+	os.system('echo '+msg5+'  | festival --tts')
 	time.sleep(3)
-	msg2="proseser is going on"
-	os.system('echo  '+msg2+'  | festival --tts')
+	msg7="proseser is going on"
+	os.system('echo  '+msg7+'  | festival --tts')
 	time.sleep(2)
 	os.system('reboot')
-# | festival --tts is cammand who convert text to speech 
-elif select == '8' :
-	print "checking internet connection in your lappi"
-	try    :
-		urllib.urlopen('https://www.google.com')
-		print "connected"
-	except :
-		print "not connected"
+# festival --tts is cammand who convert text to speech
+# for voice output ('echo '+msg+' | festival --tts')
 
 
 
