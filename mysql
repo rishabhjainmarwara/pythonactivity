@@ -1,0 +1,107 @@
+mysql -u root -p
+
+
+after login with password
+
+>show databases;
+>create database name;
+>use hello;
+
+
+'''
+>show tables
+#abhi ek bhi nii h
+	
+
+#exal file ki trh save krr rahe h
+create table student(
+   -> sr  int(10)  NOT NULL  AUTO_INCREMENT,
+   -> name  char(30)  NOT NULL,
+   -> email  varchar(30)  NOT NULL,
+   -> remark varchar(50),
+   -> );
+
+
+#complete
+
+
+
+sr - sereal number
+int(10)  - integer only 10 tk
+auto_ingrement - apne aap no. aa jayege 1,2,3,.....
+not null - means apn iske aage vale coloum komkhali nii choid skte h
+
+'''
+
+
+
+
+
+> show table
+
+
+'''
+>desc student 
+#discribe(desc)ye database ki sima ya structure dikane ke kam aati h kisis ka abhi format dek skte h
+
+'''
+'''
+>show create table student
+
+#isse apn agr database koi table h jo bani ti vo kese bani tii se show krta h
+
+'''
+
+>insert into student (sr,name,email,remark)
+->values(1,rishabh,jhvdj@hv,stu)
+
+
+
+
+
+
+
+select *  
+
+
+
+
+
+
+>mysqldumbn -u root -p hello  >adhoc.com
+scp  filename  jha send krna h
+scp  adhoc.sql code@192.168.10.144
+
+
+#restore    on terminal
+mysql -u root -p  hello  </home/code/adhoc.sql
+
+
+
+
+
+  password change   on terminal
+#systemctl stop mariadb
+
+mysqld_safe --skip-grant-table & 
+
+
+(mysql  login)
+
+
+
+
+
+
+
+>use mysql
+>show table
+>desc user
+>select user,password from user;
+
+
+update yser  set  password=password(123) where user='root';
+
+exit
+ systemctl restart mariadb
+

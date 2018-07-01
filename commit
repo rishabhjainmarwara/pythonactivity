@@ -1,0 +1,6 @@
+  228  git init
+  229  git add swepping
+  230  git commit -m "first commit"
+  231  git remote add origin https://github.com/rishabhjainmarwara/rishabhjain.git
+  232  git push -u origin master
+
